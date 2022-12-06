@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>221206_Test</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div>
+      <button class="btn" id="red">red</button>
+      <button class="btn" id="yellow">yellow</button>
+      <button class="btn" id="blue">blue</button>
+      <div class="changeBox">
+        <input type="number" class="numberBox" /><button
+          class="btn"
+          id="boxSize"
+        >
+          change
+        </button>
+      </div>
+    </div>
+    <script>
+      let changeBox = document.querySelector(".box");
+      let btnBox = document.querySelectorAll(".btn");
+      let colorName01 = document.querySelector("#red");
+      let colorName02 = document.querySelector("#yellow");
+      let colorName03 = document.querySelector("#blue");
+      let numBox = document.querySelector(".numberBox");
+      let changeSize = document.querySelector("#boxSize");
+      colorName01.addEventListener("click", function () {
+        changeBox.style.backgroundColor = "red";
+      });
+      colorName02.addEventListener("click", function () {
+        changeBox.style.backgroundColor = "yellow";
+      });
+      colorName03.addEventListener("click", function () {
+        changeBox.style.backgroundColor = "blue";
+      });
+      changeSize.addEventListener("click", function () {
+        changeBox.style.width = numBox.value + "px";
+        changeBox.style.height = numBox.value + "px";
+      });
+    </script>
+  </body>
+</html>
