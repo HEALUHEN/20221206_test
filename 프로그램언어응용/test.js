@@ -6,7 +6,6 @@ let userList = [
   { name: "Yeji", age: 23 },
   { name: "Minseok", age: 43 },
 ];
-
 let result = userList.filter(function (num) {
   return num >= 30;
 });
